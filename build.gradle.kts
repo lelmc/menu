@@ -3,7 +3,7 @@ import org.spongepowered.plugin.metadata.model.PluginDependency
 
 plugins {
     `java-library`
-    id("org.spongepowered.gradle.plugin") version "2.0.0"
+    id("org.spongepowered.gradle.plugin") version "2.0.2"
 }
 
 group = "cn.lelmc"
@@ -20,9 +20,9 @@ sponge {
         name(PluginLoaders.JAVA_PLAIN)
         version("1.0")
     }
-    plugin("menu") {
-        displayName("menu")
-        entrypoint("cn.lelmc.menu.menu")
+    plugin("lel-menu") {
+        displayName("Lel Menu")
+        entrypoint("cn.lelmc.menu.LelMenu")
         description("My plugin description")
         links {
             // homepage("https://spongepowered.org")
@@ -34,9 +34,6 @@ sponge {
             optional(false)
         }
     }
-}
-dependencies {
-    implementation(files("Pixelmon-1.16.5-9.0.1-server.jar"))
 }
 
 val javaTarget = 8 // Sponge targets a minimum of Java 8
